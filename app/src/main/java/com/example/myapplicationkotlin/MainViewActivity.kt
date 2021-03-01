@@ -13,9 +13,9 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     private val tableRespository:repository_table
     init {
         val dao = DBroom.getInstance(getApplication()).tabledao()
-        tableRespository= repository_table((dao))
+        tableRespository= repository_table(dao)
     }
-    fun inserttable(table: apptable)= viewModelScope.launch(Dispatchers.IO) {
+    fun inserttable(table:apptable)= viewModelScope.launch(Dispatchers.IO) {
         tableRespository.inserttablerepository(table)
     }
 }

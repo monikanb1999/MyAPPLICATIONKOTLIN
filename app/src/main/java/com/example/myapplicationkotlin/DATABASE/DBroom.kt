@@ -31,4 +31,5 @@ abstract class DBroom: RoomDatabase() {
         }
     }
     abstract fun tabledao(): Dao_table
+
 }
