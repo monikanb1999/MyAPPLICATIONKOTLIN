@@ -6,14 +6,14 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "tablename")
-data class apptable(
+ class apptable(
     @ColumnInfo(name = "id")
     @PrimaryKey(autoGenerate = true)
     val id:Int,
     @ColumnInfo(name = "name")
     val name: String,
     @ColumnInfo(name="age")
-    val age: String,
+    val age: Int,
     @ColumnInfo(name = "datetime")
     val datatime: Long,
     @ColumnInfo(name = "school")
